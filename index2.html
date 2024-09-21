@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rudraksha Details</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling with Fullscreen Background Image */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://example.com/rudraksha-background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center vertically */
+            align-items: center; /* Center horizontally */
+            color: #ffffff;
+            position: relative;
+            padding: 0 20px;
+        }
+
+        /* Glowing Gradient Animation */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 217, 0, 0.3), rgba(255, 107, 107, 0.3), rgba(6, 190, 182, 0.3));
+            filter: blur(200px);
+            opacity: 0.6;
+            z-index: -1;
+            animation: pulse 10s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.2);
+            }
+        }
+
+        /* Main Container Styling */
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 50px;
+            border-radius: 25px;
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
+            max-width: 600px;
+            text-align: center;
+            animation: slideUp 2s ease forwards;
+            transform: translateY(50px);
+            opacity: 0;
+        }
+
+        @keyframes slideUp {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Title Styling */
+        h1 {
+            color: #FFD700;
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            animation: glow 1.5s infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700;
+            }
+            to {
+                text-shadow: 0 0 20px #FFD700, 0 0 40px #FFD700;
+            }
+        }
+
+        /* Paragraph and Details Styling */
+        p {
+            font-size: 20px;
+            line-height: 1.6;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        /* Contact Section */
+        .contact {
+            margin-top: 30px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #FFD700;
+        }
+
+        /* QR Code Section */
+        .qr-code {
+            margin-top: 30px;
+            animation: fadeIn 2s ease 1s forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* QR Code Styling */
+        .qr-code img {
+            border: 5px solid #FFD700;
+            border-radius: 12px;
+            width: 160px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Hover effect for QR Code */
+        .qr-code img:hover {
+            transform: scale(1.2);
+            box-shadow: 0 0 20px #FFD700, 0 0 40px #FFD700;
+        }
+
+        /* Footer Styling */
+        footer {
+            position: absolute;
+            bottom: 10px;
+            font-size: 14px;
+            color: #bbb;
+            text-align: center;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container" id="rudraksha-details">
+    <h1>Shree Swami Narayan Testing Lab</h1>
+    <p><strong>Product:</strong> 100% Original Rudraksha</p>
+    <p><strong>Shape:</strong> Round Mix</p>
+    <p><strong>Colour:</strong> Brown</p>
+    <p><strong>Beads:</strong> 108+</p>
+    <p><strong>Face:</strong> 5 face</p>
+    <p><strong>Comments:</strong> Premium Quality Himalayan Rudraksha Mala</p>
+
+    <div class="contact">
+        Contact: 8439408090, 8126237511
+    </div>
+
+    <div class="qr-code">
+        <img src="path_to_your_qr_code_image.png" alt="QR Code">
+    </div>
+</div>
+
+<footer>
+    © 2024 Shree Swami Narayan Testing Lab
+</footer>
+
+<!-- JavaScript for Animation and Interaction -->
+<script>
+    // Fade-in effect after the page loads
+    document.addEventListener("DOMContentLoaded", function () {
+        const container = document.getElementById('rudraksha-details');
+        container.classList.add('show');
+    });
+</script>
+
+</body>
+</html>
